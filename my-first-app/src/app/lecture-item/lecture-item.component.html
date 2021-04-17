@@ -1,0 +1,17 @@
+<div style="padding: 50px;">
+    <div class="ui middle aligned divided list">
+        <div class="item">
+            <div class="content">
+                <h2 style="padding-bottom: 20px" class="header ui">
+                    Lecture Details:</h2>
+                <div class="header">What? {{ lecture.name | uppercase }}</div>
+                <div class="description">Where? {{lecture.building}}/ {{lecture.floor}}.{{lecture.room}}
+                </div>
+                <div class="description">When? {{lecture.day}}, {{lecture.time.hours}}:{{lecture.time.minutes}}
+                </div>
+                <div *ngIf="lecture.department" class="description">
+                    Department: {{lecture.department}}</div>
+            </div>
+        </div>
+    </div>
+</div>
