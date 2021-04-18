@@ -5,11 +5,13 @@
     <div class="ui middle aligned divided list">
         <div *ngFor="let l of lectures" class="item">
             <!-- Selector of lecture-item is selector: 'a.app-lecture-item', therefore it is selected by a element with class="app-lecture-item" -->
-            <a class="app-lecture-item item" [lecture]="l" (click)="onSelect(l)" style="margin: 10px; padding:10px"></a>
+            <!--  <a class="app-lecture-item item" [lecture]="l" (click)="onSelect(l)" style="margin: 10px; padding:10px"></a>-->
+
+            <!-- deleted selecting with function and replaced with routerLink when a is clicked-->
+            <a class="app-lecture-item item" [lecture]="l" routerLink="/lecture-details/{{l.id}}" style="margin: 10px; padding: 10px"></a>
         </div>
     </div>
 </div>
 <!-- as the details are a reusable components now with a property lecture, the selected lecture is assigned and its properties are displayed in the letcure-details.html     -->
-<app-lecture-details [lecture]="selectedLecture">
-
-</app-lecture-details>
+<!--<deleted here and moved to own view>-->
+<!--<app-lecture-details [lecture]="selectedLecture"> </app-lecture-details>-->

@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { LectureDetailsComponent } from './lecture-details/lecture-details.component';
 
 @NgModule({
+  // allle Components in diesem Modul
   declarations: [
     AppComponent,
     WhereToGoComponent,
@@ -17,11 +18,13 @@ import { LectureDetailsComponent } from './lecture-details/lecture-details.compo
     TimetableComponent,
     LectureDetailsComponent
   ],
+  // generelle Module von Angular, die man hier verwenden will oder auch selbst erstellte
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule
   ],
+  // Services kann man hier eintragen oder im Constructor einer Klasse per Dependency Injection und kennzeichen des Services mit Decorator: Injectable()
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { Lecture } from './lecture';
 import { LECTURES } from './mock-lectures';
@@ -8,7 +9,14 @@ import { LECTURES } from './mock-lectures';
 })
 export class LectureService {
 
-  constructor() { }
+  
+
+constructor() { 
+}
+
+getLecture(id: number): Observable<Lecture> {
+  return of(LECTURES.find(lecture => lecture.id === id));
+}
 
   getLectures(): Observable<Lecture[]> {
     return of(LECTURES);
