@@ -5,20 +5,20 @@ import { LECTURES } from '../shared/mock-lectures';
 @Component({
   selector: 'app-timetable',
   templateUrl: './timetable.component.html',
-  styleUrls: ['./timetable.component.css']
+  styleUrls: []
 })
 export class TimetableComponent implements OnInit {
 
   lectures = LECTURES;
   selectedLecture: Lecture;
+
+  onSelect(lecture: Lecture): void {
+    this.selectedLecture = lecture;
+}
+
   constructor() { }
  
   
-  
-
-  onSelect(lecture: Lecture): void {
-      this.selectedLecture = lecture;
-  }
   
 
   ngOnInit(): void {

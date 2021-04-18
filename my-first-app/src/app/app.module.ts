@@ -7,13 +7,15 @@ import { WhereToGoComponent } from './where-to-go/where-to-go.component';
 import { LectureItemComponent } from './lecture-item/lecture-item.component';
 import { TimetableComponent } from './timetable/timetable.component';
 import { FormsModule } from '@angular/forms';
+import { LectureDetailsComponent } from './lecture-details/lecture-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WhereToGoComponent,
     LectureItemComponent,
-    TimetableComponent
+    TimetableComponent,
+    LectureDetailsComponent
   ],
   imports: [
     FormsModule,
