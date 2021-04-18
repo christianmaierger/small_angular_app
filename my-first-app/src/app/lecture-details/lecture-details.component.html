@@ -1,14 +1,14 @@
 <div class="ui form">
     <div *ngIf="lecture" style="padding: 50px;">
-        <h4 style="text-align:left"> {{lecture.name}} Details</h4>
-        <div style="text-align:left;">
-            <div class="field">
+        <h4 style="text-align:left" style="padding: 10px"> {{lecture.name}} Details</h4>
+        <div style="text-align:left, padding: 10px;">
+            <div class="field" style="padding: 10px">
                 <label>Name of the Lecture*:</label>
                 <div class="field">
                     <input [(ngModel)]="lecture.name" placeholder="Name" />
                 </div>
             </div>
-            <div class="field">
+            <div class="field" style="padding: 10px">
                 <label>Location of the Lecture*:</label>
                 <div class="three fields">
                     <div class="field">
@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div class="field">
+            <div class="field" style="padding: 10px">
                 <label>Time of the Lecture*:</label>
                 <div class="three fields">
                     <div class="field">
@@ -71,13 +71,13 @@
                 </div>
             </div>
 
-            <div class="field">
+            <div class="field" style="padding: 10px">
                 <label>Department of the Lecture:</label>
                 <div class="field">
                     <input [(ngModel)]="lecture.department" placeholder="Department" />
                 </div>
             </div>
+            <p>* Please fill in these input fields!</p>
         </div>
-        <p>* Please fill in these input fields!</p>
     </div>
 </div>

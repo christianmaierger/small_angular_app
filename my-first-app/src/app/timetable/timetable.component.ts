@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Lecture } from '../shared/lecture';
+import { LectureService } from '../shared/lecture.service';
 import { LECTURES } from '../shared/mock-lectures';
 
 @Component({
@@ -9,19 +10,26 @@ import { LECTURES } from '../shared/mock-lectures';
 })
 export class TimetableComponent implements OnInit {
 
-  lectures = LECTURES;
+  lectures: Lecture[];
   selectedLecture: Lecture;
 
   onSelect(lecture: Lecture): void {
     this.selectedLecture = lecture;
-}
+  }
 
-  constructor() { }
+  getLectures(): void {
+    this.lectureService.getLectures()
+    .subscribe(lectureArray => this.lectures = lectureArray);
+  }
+
+  // Singleton Pattern, wir können keine Dependencies per new anlegen und da der Service nur EIN mal injeziert wurde, existiert nur EIN Objekt
+  constructor(private lectureService: LectureService) { }
  
   
   
 
   ngOnInit(): void {
+    this.getLectures();
   }
 
 }
