@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Lecture } from '../shared/lecture';
 import { LectureService } from '../shared/lecture.service';
-import { LECTURES } from '../shared/mock-lectures';
+//import { LECTURES } from '../shared/mock-lectures';
 
 @Component({
   selector: 'app-timetable',
@@ -11,6 +11,7 @@ import { LECTURES } from '../shared/mock-lectures';
 export class TimetableComponent implements OnInit {
 
   lectures: Lecture[];
+  //lectures = LECTURES;
   
 
   //selectedLecture: Lecture;

@@ -12,7 +12,6 @@ import { Location } from '@angular/common';
 export class LectureDetailsComponent implements OnInit {
 
 @Input() lecture: Lecture;
-
 constructor(
   private route: ActivatedRoute,
   private lectureService: LectureService,
